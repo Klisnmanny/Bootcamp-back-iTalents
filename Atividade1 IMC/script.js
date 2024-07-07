@@ -1,7 +1,7 @@
 
 // função principal onde tudo está acontecendo, será chamada depois do carregamento da DOM, uma boa pratica tbm é coloca o carregamento do script antes do fechamento da Body, no html.
 document.addEventListener('DOMContentLoaded', function() {
-    
+
     //constantes para o button e para div onde será colocado o resultado
     const button = document.querySelector('button')
     const resultadoDiv = document.getElementById('resultado')
@@ -90,23 +90,23 @@ document.addEventListener('DOMContentLoaded', function() {
         for (let i = 0; i < 30; i++) {
 
             //inicia a função para gerar os numeros aleatorios, e pega o peso e altura
-            const { peso, altura } = gerarValoresAleatorios(); 
+            const { peso, altura } = gerarValoresAleatorios()
             // realiza o calculo
-            const imc = (peso / (altura * altura)).toFixed(2); 
+            const imc = (peso / (altura * altura)).toFixed(2)
 
             let classificacao = '';
             if (imc < 18.5) {
-                classificacao = 'Abaixo do peso';
+                classificacao = 'Abaixo do peso'
             } else if (imc >= 18.5 && imc <= 24.9) {
-                classificacao = 'Peso normal';
+                classificacao = 'Peso normal'
             } else if (imc >= 25 && imc <= 29.9) {
-                classificacao = 'Sobrepeso';
+                classificacao = 'Sobrepeso'
             } else {
-                classificacao = 'Obesidade';
+                classificacao = 'Obesidade'
             }
 
             //Coloca no console os valores e resultados, começando do teste 1 ao 30
-            console.log(`Teste ${i + 1}: Peso ${peso} kg, Altura ${altura} m, IMC ${imc} (${classificacao})`);
+            console.log(`Teste ${i + 1}: Peso ${peso} kg, Altura ${altura} m, IMC ${imc} (${classificacao})`)
         }
     }
 
